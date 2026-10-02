@@ -45,10 +45,7 @@ def trace_abnormal(value, limit, depth=0, steps=None):
 
 @monitor
 def process_stream(classified_stream):
-    """
-    MAJOR PROCESSING FUNCTION (monitored by the decorator).
-    Consumes the generator one reading at a time and returns a results dict.
-    """
+    
     results = {
         "processed": 0, "valid": 0, "invalid": 0,
         "invalid_details": [], "valid_samples": [],
@@ -85,7 +82,6 @@ def process_stream(classified_stream):
 
 
 def build_report(results):
-    """Uses the returned results to compute the final diagnostic summary."""
     abnormal_count = len(results["abnormal"])
     if abnormal_count == 0:
         status = "NORMAL"

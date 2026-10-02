@@ -1,5 +1,3 @@
-"""Entry point: wires the modules together and prints the assessment output."""
-
 from Student_Input import LAST_NAME, SEED_NUM, FAVORITE_ARTIST, STREAM_LENGTH
 from telemetry import build_student_seed, telemetry_stream, valid_readings
 from diagnostics import process_stream, build_report, execution_log
